@@ -7,7 +7,7 @@ updates:
       day: "monday"
       time: "08:00"
       timezone: "UTC"
-    versioning-strategy: "increase"
+    versioning-strategy: "auto"
     groups:
       python-production:
         dependency-type: "production"
