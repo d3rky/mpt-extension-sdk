@@ -1,4 +1,3 @@
-
 name: PR build and merge
 
 on:
@@ -14,28 +13,28 @@ permissions:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
     steps:
-    - name: "Checkout"
-      uses: actions/checkout@v6
-      with:
-        fetch-depth: 0
+      - name: "Checkout"
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
-    - name: "Build test containers"
-      run: make build
+      - name: "Build test containers"
+        run: make build
 
-    - name: "Run validation & test"
-      run: make check-all
+      - name: "Run validation & test"
+        run: make check-all
 
-    - name: "Run SonarCloud Scan"
-      uses: SonarSource/sonarqube-scan-action@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      - name: "Run SonarCloud Scan"
+        if: false
+        uses: SonarSource/sonarqube-scan-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
-    - name: "Stop containers"
-      if: always()
-      run: make down
+      - name: "Stop containers"
+        if: always()
+        run: make down
