@@ -34,7 +34,7 @@ updates:
         versions: ["*"]
       - dependency-name: "opentelemetry-instrumentation-requests"
         versions: ["*"]
-      - dependency-name: "azure-monitor-opentelemetry-exporter==1.0.0b25"
+      - dependency-name: "azure-monitor-opentelemetry-exporter"
         versions: ["*"]
   - package-ecosystem: "docker"
     directory: "/"
