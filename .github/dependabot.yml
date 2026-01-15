@@ -22,20 +22,6 @@ updates:
         versions: ["*"]
       - dependency-name: "django-ninja"
         versions: ["*"]
-      - dependency-name: "opentelemetry-api"
-        versions: ["*"]
-      - dependency-name: "opentelemetry-sdk"
-        versions: ["*"]
-      - dependency-name: "opentelemetry-instrumentation"
-        versions: ["*"]
-      - dependency-name: "opentelemetry-instrumentation-django"
-        versions: ["*"]
-      - dependency-name: "opentelemetry-instrumentation-logging"
-        versions: ["*"]
-      - dependency-name: "opentelemetry-instrumentation-requests"
-        versions: ["*"]
-      - dependency-name: "azure-monitor-opentelemetry-exporter"
-        versions: ["*"]
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
